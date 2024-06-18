@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mar. 18 juin 2024 à 19:30
+-- Généré le : mar. 18 juin 2024 à 20:00
 -- Version du serveur : 11.3.2-MariaDB
 -- Version de PHP : 8.3.6
 
@@ -91,7 +91,8 @@ INSERT INTO `cards` (`id`, `cardNumber`, `cardTypesId`) VALUES
 (7, 1263, 3),
 (8, 2198, 1),
 (9, 2927, 2),
-(10, 2775, 2);
+(10, 2775, 2),
+(11, 7125, 2);
 
 -- --------------------------------------------------------
 
@@ -160,7 +161,8 @@ INSERT INTO `clients` (`id`, `lastName`, `firstName`, `birthDate`, `card`, `card
 (23, 'Mccormick', 'Hyatt', '1968-05-02', 0, NULL),
 (24, 'Stark', 'Keiko', '1985-04-08', 0, NULL),
 (25, 'London', 'Sean', '1975-02-02', 0, NULL),
-(26, 'Moore', 'Alicia', '1979-09-08', 0, NULL);
+(29, 'Moore', 'Alicia', '1979-09-08', 0, NULL),
+(31, 'Ciccone', 'Louise', '1958-08-16', 1, 7125);
 
 -- --------------------------------------------------------
 
@@ -449,7 +451,7 @@ ALTER TABLE `bookings`
 -- AUTO_INCREMENT pour la table `cards`
 --
 ALTER TABLE `cards`
-  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `cardtypes`
@@ -461,7 +463,7 @@ ALTER TABLE `cardtypes`
 -- AUTO_INCREMENT pour la table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT pour la table `genres`
