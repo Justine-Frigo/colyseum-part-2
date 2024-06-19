@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mar. 18 juin 2024 à 20:00
+-- Généré le : mer. 19 juin 2024 à 08:15
 -- Version du serveur : 11.3.2-MariaDB
 -- Version de PHP : 8.3.6
 
@@ -92,7 +92,8 @@ INSERT INTO `cards` (`id`, `cardNumber`, `cardTypesId`) VALUES
 (8, 2198, 1),
 (9, 2927, 2),
 (10, 2775, 2),
-(11, 7125, 2);
+(11, 7125, 2),
+(12, 8563, 2);
 
 -- --------------------------------------------------------
 
@@ -244,7 +245,8 @@ INSERT INTO `shows` (`id`, `title`, `performer`, `date`, `showTypesId`, `firstGe
 (5, 'Neque et', 'Hays', '2016-12-24', 1, 6, 15, '02:00:00', '20:00:00'),
 (6, 'Convallis convallis', 'Boone', '2019-12-18', 1, 9, 21, '02:00:00', '20:00:00'),
 (7, 'Cursus. Nunc', 'Prince', '2020-05-02', 1, 6, 10, '02:00:00', '20:00:00'),
-(8, 'Ornare lectus', 'Butler', '2016-12-25', 1, 10, 9, '02:00:00', '20:00:00');
+(8, 'Ornare lectus', 'Butler', '2016-12-25', 1, 10, 9, '02:00:00', '20:00:00'),
+(9, 'I love techno', 'David Guetta', '2019-09-20', 1, 4, 10, '03:00:00', '21:00:00');
 
 -- --------------------------------------------------------
 
@@ -451,7 +453,7 @@ ALTER TABLE `bookings`
 -- AUTO_INCREMENT pour la table `cards`
 --
 ALTER TABLE `cards`
-  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT pour la table `cardtypes`
@@ -463,7 +465,7 @@ ALTER TABLE `cardtypes`
 -- AUTO_INCREMENT pour la table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT pour la table `genres`
@@ -475,7 +477,7 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT pour la table `shows`
 --
 ALTER TABLE `shows`
-  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT pour la table `showtypes`
