@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mer. 19 juin 2024 à 08:15
+-- Généré le : mer. 19 juin 2024 à 09:41
 -- Version du serveur : 11.3.2-MariaDB
 -- Version de PHP : 8.3.6
 
@@ -158,7 +158,7 @@ INSERT INTO `clients` (`id`, `lastName`, `firstName`, `birthDate`, `card`, `card
 (19, 'Vaughan', 'Vanna', '1992-09-13', 1, 1263),
 (20, 'Barnes', 'Preston', '1988-12-20', 1, 2198),
 (21, 'Padilla', 'Britanney', '2015-04-03', 1, 2927),
-(22, 'Perry', 'Gabriel', '1974-04-09', 1, 2775),
+(22, 'Perry', 'Gabriel', '1994-04-09', 1, 2775),
 (23, 'Mccormick', 'Hyatt', '1968-05-02', 0, NULL),
 (24, 'Stark', 'Keiko', '1985-04-08', 0, NULL),
 (25, 'London', 'Sean', '1975-02-02', 0, NULL),
