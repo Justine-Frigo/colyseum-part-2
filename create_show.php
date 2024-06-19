@@ -91,6 +91,13 @@ if (isset($_POST['create'])) {
             <option value="23">Comédie</option>
             <option value="24">Comtemporain</option>
             <option value="25">Monologue</option>
+            <option value="26">One Man / Woman show</option>
+            <option value="27">Café-Théâtre</option>
+            <option value="28">Stand up</option>
+            <option value="29">Autres</option>
+            <option value="30">Contemporaine</option>
+            <option value="31">Classique</option>
+            <option value="32">Urbaine</option>
         </select><br>
         <label for="secondGenreId">Second genre</label>
         <select name="secondGenreId">
@@ -120,6 +127,13 @@ if (isset($_POST['create'])) {
             <option value="23">Comédie</option>
             <option value="24">Comtemporain</option>
             <option value="25">Monologue</option>
+            <option value="26">One Man / Woman show</option>
+            <option value="27">Café-Théâtre</option>
+            <option value="28">Stand up</option>
+            <option value="29">Autres</option>
+            <option value="30">Contemporaine</option>
+            <option value="31">Classique</option>
+            <option value="32">Urbaine</option>
         </select><br>
         <label for="duration">Durée</label>
         <input type="time" name="duration"><br>

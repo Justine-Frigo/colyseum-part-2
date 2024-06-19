@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mer. 19 juin 2024 à 09:41
+-- Généré le : mer. 19 juin 2024 à 10:10
 -- Version du serveur : 11.3.2-MariaDB
 -- Version de PHP : 8.3.6
 
@@ -238,7 +238,7 @@ CREATE TABLE `shows` (
 --
 
 INSERT INTO `shows` (`id`, `title`, `performer`, `date`, `showTypesId`, `firstGenresId`, `secondGenreId`, `duration`, `startTime`) VALUES
-(1, 'Vestibulum accumsan', 'Osborn', '2016-10-15', 1, 4, 3, '02:00:00', '20:00:00'),
+(1, 'Vestibulum accumsan', 'Osborn', '2017-01-01', 1, 4, 3, '02:00:00', '21:00:00'),
 (2, 'Venenatis lacus', 'Dale', '2017-01-05', 1, 1, 8, '02:00:00', '20:00:00'),
 (3, 'Sem egestas', 'Juarez', '2017-02-01', 1, 8, 21, '02:00:00', '20:00:00'),
 (4, 'Nec urna', 'Tate', '2018-05-02', 1, 3, 21, '02:00:00', '20:00:00'),
