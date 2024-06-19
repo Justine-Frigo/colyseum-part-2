@@ -19,7 +19,7 @@ if (isset($_POST['create'])) {
     $stmt->execute();
 
     if(isset($_POST['show'])){
-        if($_POST['showTypesId'] !=0){
+        if($_POST['showTypesId'] != 0){
             $sql = 'INSERT INTO genres (genre, showTypesId) VALUES (:genre, :showTypesId);';
             $stmt = $pdo->prepare($sql);
             $stmt->bindParam(':genre', $_POST['genre']);

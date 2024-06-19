@@ -1,19 +1,12 @@
 <?php
 include('./config.php');
 
-try {
-    $database = new PDO($url, $_ENV["DB_USER"], $_ENV["DB_PASS"]);
-    $database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $error) {
-    die("Connection failed: " . $error->getMessage());
-}
-
 $original_show = [];
 
 if (isset($_POST["update"])) {
     $id = $_POST["id"];
     try {
-        $statement = $database->prepare("SELECT * FROM shows WHERE id = :id");
+        $statement = $pdo->prepare("SELECT * FROM shows WHERE id = :id");
         $statement->bindParam(':id', $id, PDO::PARAM_INT);
         $statement->execute();
         $original_show = $statement->fetch(PDO::FETCH_ASSOC);
@@ -29,7 +22,7 @@ if (isset($_POST["update"])) {
 if (isset($_POST['button'])) {
     try {
         $sql = "UPDATE shows SET title = :title, performer = :performer, date = :date, showTypesId = :showTypesId, firstGenresId = :firstGenresId, secondGenreId = :secondGenreId, duration = :duration, startTime = :startTime WHERE id = :id";
-        $statement = $database->prepare($sql);
+        $statement = $pdo->prepare($sql);
 
         $date = !empty($_POST['date']) ? date('Y-m-d', strtotime($_POST['date'])) : null;
 

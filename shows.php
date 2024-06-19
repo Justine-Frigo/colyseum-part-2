@@ -3,10 +3,8 @@
 include('./config.php');
 
 try {
-    $database = new PDO($url, $_ENV["DB_USER"], $_ENV["DB_PASS"]);
-    $database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  
-    $statement = $database->query("SELECT * FROM shows WHERE id = 1");
+    
+    $statement = $pdo->query("SELECT * FROM shows WHERE id = 1");
     $shows = [];
   
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
