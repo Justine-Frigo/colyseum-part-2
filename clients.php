@@ -6,7 +6,7 @@ try {
     $database = new PDO($url, $_ENV["DB_USER"], $_ENV["DB_PASS"]);
     $database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   
-    $statement = $database->query("SELECT * FROM clients WHERE id = 22");
+    $statement = $database->query("SELECT * FROM clients WHERE id IN (5, 22)");
     $clients = [];
   
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
