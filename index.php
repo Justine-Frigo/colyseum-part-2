@@ -3,5 +3,6 @@
 // require 'create_show.php';
 require 'clients.php';
 require 'shows.php';
+require 'bookings.php';
 
 ?>
