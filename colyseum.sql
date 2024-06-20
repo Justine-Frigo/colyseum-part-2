@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mer. 19 juin 2024 à 10:17
+-- Généré le : jeu. 20 juin 2024 à 08:30
 -- Version du serveur : 11.3.2-MariaDB
 -- Version de PHP : 8.3.6
 
@@ -20,7 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `colyseum`
 --
-DROP DATABASE IF EXISTS `colyseum`;
 CREATE DATABASE IF NOT EXISTS `colyseum` DEFAULT CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci;
 USE `colyseum`;
 
@@ -62,9 +61,7 @@ INSERT INTO `bookings` (`id`, `clientId`) VALUES
 (20, 20),
 (21, 21),
 (22, 22),
-(23, 23),
-(24, 24),
-(25, 25);
+(23, 23);
 
 -- --------------------------------------------------------
 
@@ -161,8 +158,6 @@ INSERT INTO `clients` (`id`, `lastName`, `firstName`, `birthDate`, `card`, `card
 (21, 'Padilla', 'Britanney', '2015-04-03', 1, 2927),
 (22, 'Perry', 'Gabriel', '1994-04-09', 1, 2775),
 (23, 'Mccormick', 'Hyatt', '1968-05-02', 0, NULL),
-(24, 'Stark', 'Keiko', '1985-04-08', 0, NULL),
-(25, 'London', 'Sean', '1975-02-02', 0, NULL),
 (29, 'Moore', 'Alicia', '1979-09-08', 0, NULL),
 (31, 'Ciccone', 'Louise', '1958-08-16', 1, 7125);
 
@@ -310,8 +305,6 @@ INSERT INTO `tickets` (`id`, `price`, `bookingsId`) VALUES
 (21, 40, 7),
 (22, 40, 7),
 (23, 40, 8),
-(24, 40, 9),
-(25, 40, 9),
 (26, 40, 9),
 (27, 40, 9),
 (28, 40, 9),
@@ -478,7 +471,7 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT pour la table `shows`
 --
 ALTER TABLE `shows`
-  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT pour la table `showtypes`

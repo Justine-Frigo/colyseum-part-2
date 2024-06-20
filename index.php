@@ -4,5 +4,6 @@
 require 'clients.php';
 require 'shows.php';
 require 'bookings.php';
+require 'tickets.php';
 
 ?>
