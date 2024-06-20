@@ -1,35 +1,37 @@
-<?php 
+<?php
 
 include('./config.php');
 
 try {
-    $database = new PDO($url, $_ENV["DB_USER"], $_ENV["DB_PASS"]);
-    $database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  
-    $statement = $database->query("SELECT * FROM clients WHERE id IN (5, 22)");
-    $clients = [];
-  
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-      $clients[] = $row;
-    }
-  } catch (PDOException $error) {
-    print_r($error->getMessage());
+  $database = new PDO($url, $_ENV["DB_USER"], $_ENV["DB_PASS"]);
+  $database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+  $statement = $database->query("SELECT * FROM clients WHERE id IN (5, 22, 24, 25)");
+  $clients = [];
+
+  while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+    $clients[] = $row;
   }
-  
+} catch (PDOException $error) {
+  print_r($error->getMessage());
+}
+
 
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
 
-<h1>Liste des clients</h1>
+  <h1>Liste des clients</h1>
   <table>
     <thead>
       <tr>
@@ -46,9 +48,9 @@ try {
           Carte
         </th>
         <th>
-         Numéro de carte
+          Numéro de carte
         </th>
-        
+
         <th>
           Update
         </th>
@@ -56,9 +58,9 @@ try {
     </thead>
 
     <tbody>
-        <?php
-        foreach ($clients as $client) {
-        ?>
+      <?php
+      foreach ($clients as $client) {
+      ?>
         <form action="./update_client.php" method="POST">
           <tr>
             <td><?php echo $client['lastName'] ?></td>
@@ -69,14 +71,20 @@ try {
             <td> <input type="submit" name="update" value="Update">
               <input type="hidden" name="id" value="<?php echo $client['id'] ?>">
             </td>
+        </form>
+        <td>
+          <form action="./delete_client.php" method="POST">
+          <input type="checkbox" name="delete" value="<?php echo $client['id'] ?>" onclick="this.form.submit()"></form>
+          </form>
+        </td>
         </tr>
-      </form>
-    <?php }
-    ?>
+      <?php }
+      ?>
 
     </tbody>
 
   </table>
-    
+
 </body>
+
 </html>
